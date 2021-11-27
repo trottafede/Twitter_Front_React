@@ -7,17 +7,21 @@ export default function Login() {
   const [password, setPassword] = useState("");
 
   const handleSubmit = () => {
-    const url = "https://twitter-api-zeta.vercel.app/api/tokens";
+    const url = `${process.env.REACT_APP_API_BACKEND}/api/tokens`;
     const fetchApi = async () => {
       try {
-        const response = await axios({
-          method: "post",
-          url: url,
-          data: {
+        const response = await axios.post(
+          url,
+          {
             email,
             password,
           },
-        });
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
 
         console.log(response);
       } catch (error) {
