@@ -1,0 +1,114 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  nav .disabled {
+    pointer-events: none;
+    opacity: 0.6;
+  }
+
+  nav ul {
+    list-style: none;
+    padding-left: 0 !important;
+  }
+  nav ul li {
+    padding: 10px;
+    border-radius: 20px;
+    transition: 1.2s;
+    text-align: start;
+  }
+  nav ul li:hover {
+    background-color: rgba(119, 118, 118, 0.89);
+    cursor: pointer;
+  }
+  nav ul li i {
+    color: var(--font-Color);
+    margin-right: 20px;
+    font-size: 1.6rem;
+  }
+  nav ul a {
+    color: var(--font-Color);
+    text-decoration: none;
+    border-radius: 50px !important;
+  }
+
+  nav #buttonHome a {
+    color: var(--font-Color);
+    text-decoration: none;
+    width: 230px;
+    border-radius: 50px !important;
+    padding: 10px;
+  }
+
+  nav #activeUser {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+  }
+  nav #leftSideActiveUser {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav #activeUserInfo {
+    display: inline-block;
+    margin-left: 10px;
+  }
+  nav #activeUser img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+  }
+
+  nav #activeUser p {
+    margin-bottom: 0;
+    color: #fff;
+  }
+  nav #activeUser em {
+    color: grey;
+  }
+  nav #activeUser a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: grey;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  nav #QueEstasPensandoModal img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+  }
+
+  nav .bgBlack {
+    color: #fff;
+    background-color: black !important;
+  }
+
+  nav .bgBlack input[type="text"],
+  nav .bgBlack input[type="number"] {
+    color: #fff;
+
+    background-color: black !important;
+  }
+  nav .bgGrey {
+    background-color: rgba(151, 145, 145, 0.164);
+  }
+}

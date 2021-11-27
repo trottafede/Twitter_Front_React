@@ -1,0 +1,367 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #loginPage #twitterBG {
+    background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png");
+    height: 96vh;
+    display: none;
+  }
+
+  #loginPage #imgContainer {
+    display: flex; /* establish flex container */
+    flex-direction: column; /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center; /* center items horizontally, in this case */
+    height: 100%;
+    display: none;
+  }
+  #loginPage #twitterBG img {
+    width: auto;
+    height: 250px;
+    display: none;
+  }
+
+  #loginPage #rightSide {
+    padding: 60px;
+    height: 96vh;
+  }
+  #loginPage #formLogin {
+    margin-top: 60px;
+    color: #fff;
+  }
+
+  #loginPage #rightSide h1 {
+    color: #fff;
+    font-size: 4rem !important;
+    padding-top: 40px;
+  }
+
+  #loginPage #rightSide h2 {
+    color: #fff;
+    padding-top: 40px;
+  }
+
+  #loginPage #rightSide em {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: rgb(95, 94, 94);
+  }
+
+  #loginPage #rightSide p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #fff;
+  }
+
+  #loginPage #emAboutThings {
+    text-align: center;
+    padding: 5px;
+  }
+  #loginPage #emAboutThings em {
+    color: grey;
+    margin-left: 20px;
+    font-size: 0.78rem;
+  }
+
+  #loginPage input[type="text"]:focus,
+  #loginPage input[type="number"]:focus,
+  #loginPage input[type="email"]:focus,
+  #loginPage input[type="password"]:focus {
+    outline: none !important;
+    border: 2px solid rgb(219, 4, 209);
+    box-shadow: 0 0 10px #f1c4e4;
+  }
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #loginPage #twitterBG {
+    background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png");
+    height: 96vh;
+    display: none;
+  }
+
+  #loginPage #imgContainer {
+    display: flex; /* establish flex container */
+    flex-direction: column; /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center; /* center items horizontally, in this case */
+    height: 100%;
+    display: none;
+  }
+  #loginPage #twitterBG img {
+    width: auto;
+    height: 250px;
+    display: none;
+  }
+
+  #loginPage #rightSide {
+    padding: 60px;
+    height: 96vh;
+  }
+  #loginPage #formLogin {
+    margin-top: 60px;
+    color: #fff;
+  }
+
+  #loginPage #rightSide h1 {
+    color: #fff;
+    font-size: 4rem !important;
+    padding-top: 40px;
+  }
+
+  #loginPage #rightSide h2 {
+    color: #fff;
+    padding-top: 40px;
+  }
+
+  #loginPage #rightSide em {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: rgb(95, 94, 94);
+  }
+
+  #loginPage #rightSide p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #fff;
+  }
+
+  #loginPage #emAboutThings {
+    text-align: center;
+    padding: 5px;
+  }
+  #loginPage #emAboutThings em {
+    color: grey;
+    margin-left: 20px;
+    font-size: 0.78rem;
+  }
+
+  #loginPage input[type="text"]:focus,
+  #loginPage input[type="number"]:focus,
+  #loginPage input[type="email"]:focus,
+  #loginPage input[type="password"]:focus {
+    outline: none !important;
+    border: 2px solid rgb(219, 4, 209);
+    box-shadow: 0 0 10px #f1c4e4;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #loginPage #twitterBG {
+    background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png");
+    height: 96vh;
+    display: none;
+  }
+
+  #loginPage #imgContainer {
+    display: flex; /* establish flex container */
+    flex-direction: column; /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center; /* center items horizontally, in this case */
+    height: 100%;
+    display: none;
+  }
+  #loginPage #twitterBG img {
+    width: auto;
+    height: 250px;
+    display: none;
+  }
+
+  #loginPage #rightSide {
+    padding: 60px;
+    height: 96vh;
+  }
+  #loginPage #formLogin {
+    margin-top: 60px;
+    color: #fff;
+  }
+
+  #loginPage #rightSide h1 {
+    color: #fff;
+    font-size: 4rem !important;
+    padding-top: 40px;
+  }
+
+  #loginPage #rightSide h2 {
+    color: #fff;
+    padding-top: 40px;
+  }
+
+  #loginPage #rightSide em {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: rgb(95, 94, 94);
+  }
+
+  #loginPage #rightSide p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #fff;
+  }
+
+  #loginPage #emAboutThings {
+    text-align: center;
+    padding: 5px;
+  }
+  #loginPage #emAboutThings em {
+    color: grey;
+    margin-left: 20px;
+    font-size: 0.78rem;
+  }
+
+  #loginPage input[type="text"]:focus,
+  #loginPage input[type="number"]:focus,
+  #loginPage input[type="email"]:focus,
+  #loginPage input[type="password"]:focus {
+    outline: none !important;
+    border: 2px solid rgb(219, 4, 209);
+    box-shadow: 0 0 10px #f1c4e4;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #loginPage #twitterBG {
+    background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png");
+    height: 96vh;
+  }
+
+  #loginPage #imgContainer {
+    display: flex; /* establish flex container */
+    flex-direction: column; /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center; /* center items horizontally, in this case */
+    height: 100%;
+  }
+  #loginPage #twitterBG img {
+    width: auto;
+    height: 250px;
+  }
+
+  #loginPage #rightSide {
+    padding: 60px;
+    height: 96vh;
+  }
+  #loginPage #formLogin {
+    margin-top: 60px;
+    color: #fff;
+  }
+
+  #loginPage #rightSide h1 {
+    color: #fff;
+    font-size: 4rem !important;
+    padding-top: 40px;
+  }
+
+  #loginPage #rightSide h2 {
+    color: #fff;
+    padding-top: 40px;
+  }
+
+  #loginPage #rightSide em {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: rgb(95, 94, 94);
+  }
+
+  #loginPage #rightSide p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #fff;
+  }
+
+  #loginPage #emAboutThings {
+    text-align: center;
+    padding: 5px;
+  }
+  #loginPage #emAboutThings em {
+    color: grey;
+    margin-left: 20px;
+    font-size: 0.78rem;
+  }
+
+  #loginPage input[type="text"]:focus,
+  #loginPage input[type="number"]:focus,
+  #loginPage input[type="email"]:focus,
+  #loginPage input[type="password"]:focus {
+    outline: none !important;
+    border: 2px solid rgb(219, 4, 209);
+    box-shadow: 0 0 10px #f1c4e4;
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #loginPage #twitterBG {
+    background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png");
+    height: 96vh;
+  }
+
+  #loginPage #imgContainer {
+    display: flex; /* establish flex container */
+    flex-direction: column; /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center; /* center items horizontally, in this case */
+    height: 100%;
+  }
+  #loginPage #twitterBG img {
+    width: auto;
+    height: 250px;
+  }
+
+  #loginPage #rightSide {
+    padding: 60px;
+    height: 96vh;
+  }
+  #loginPage #formLogin {
+    margin-top: 60px;
+    color: #fff;
+  }
+
+  #loginPage #rightSide h1 {
+    color: #fff;
+    font-size: 4rem !important;
+    padding-top: 40px;
+  }
+
+  #loginPage #rightSide h2 {
+    color: #fff;
+    padding-top: 40px;
+  }
+
+  #loginPage #rightSide em {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: rgb(95, 94, 94);
+  }
+
+  #loginPage #rightSide p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #fff;
+  }
+
+  #loginPage #emAboutThings {
+    text-align: center;
+    padding: 5px;
+  }
+  #loginPage #emAboutThings em {
+    color: grey;
+    margin-left: 20px;
+    font-size: 0.78rem;
+  }
+
+  #loginPage input[type="text"]:focus,
+  #loginPage input[type="number"]:focus,
+  #loginPage input[type="email"]:focus,
+  #loginPage input[type="password"]:focus {
+    outline: none !important;
+    border: 2px solid rgb(219, 4, 209);
+    box-shadow: 0 0 10px #f1c4e4;
+  }
+}
