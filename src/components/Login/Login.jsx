@@ -1,12 +1,26 @@
 import "./Login.css";
 import React, { useState } from "react";
 import axios from "axios";
+import { useDispatch } from "react-redux";
+import { useLocation, useNavigate } from "react-router";
+
+import useAuth from "../../hooks/useAuth";
 
 export default function Login() {
+  const auth = useAuth();
+  console.log(auth);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = () => {
+    handleIsLoading();
     const url = `${process.env.REACT_APP_API_BACKEND}/api/tokens`;
     const fetchApi = async () => {
       try {
@@ -23,14 +37,29 @@ export default function Login() {
           }
         );
 
-        console.log(response);
+        if (response.status === 200) {
+          const { token } = response.data;
+          dispatch({
+            type: "ADD_USER",
+            payload: token,
+          });
+          handleIsLoading();
+          navigate(from, { replace: true });
+        }
       } catch (error) {
+        alert(error);
+        handleIsLoading();
         console.error(error);
       }
     };
 
     fetchApi();
   };
+
+  const handleIsLoading = () => {
+    setIsLoading((prevState) => !prevState);
+  };
+
   return (
     <div id="loginPage" className="container-fluid">
       <div className="row">
@@ -95,8 +124,17 @@ export default function Login() {
                 className="btn btn-primary"
                 type="button"
               >
+                {isLoading && (
+                  <span
+                    className="spinner-grow spinner-grow-sm"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                )}
+                {"  "}
                 Login
               </button>
+
               <em>
                 By signing up, you agree to the Terms of Service and Privacy
                 Policy, including Cookie Use.

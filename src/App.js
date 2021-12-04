@@ -1,10 +1,25 @@
 import "./App.css";
-import Home from "./components/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
+import Home from "./components/Home";
+import NotFound from "./components/NotFound";
+import PrivateRoute from "./routes/PrivateRoute";
+import PublicRoute from "./routes/PublicRoute";
 function App() {
   return (
     <div className="App">
-      <Login />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/login" element={<PublicRoute />}>
+            <Route path="/login" element={<Login />} />
+          </Route>
+
+          <Route path="/" element={<PrivateRoute />}>
+            <Route path="/" element={<Home />} />
+          </Route>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

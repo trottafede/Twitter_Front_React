@@ -2,31 +2,31 @@ import React from "react";
 import Navbar from "./Navbar/Navbar";
 export default function Home() {
   return (
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
+    <div className="container">
+      <div className="row">
+        <div className="col-lg-3">
           {" "}
           <Navbar />{" "}
         </div>
-        <div id="middleSideHome" class="col-lg-6">
+        <div id="middleSideHome" className="col-lg-6">
           <div id="inicio">
             <h1>Inicio</h1>
           </div>
 
           {/* <% if (passportUser) { %>
         <div id="QueEstasPensando">
-          <div class="row">
-            <div class="col-lg-2">
+          <div className="row">
+            <div className="col-lg-2">
               <img
                 src="<%- passportUser.image %>"
                 alt="<%- passportUser.firstname %> <%- passportUser.lastname %>"
               />
             </div>
-            <div class="col-lg-10">
+            <div className="col-lg-10">
               <form action="/tweets/store" method="post">
                 <div>
                   <input
-                    class="form-control"
+                    className="form-control"
                     type="text"
                     placeholder="Qué estás pensando?"
                     name="tweet"
@@ -34,14 +34,14 @@ export default function Home() {
                   />
                   <p>Cualquier persona puede responder</p>
                   <hr />
-                  <div class="d-flex justify-content-around">
-                    <i class="far fa-image"></i>
-                    <i class="fas fa-gift"></i>
-                    <i class="fas fa-question"></i>
-                    <i class="fas fa-smile-beam"></i>
-                    <i class="fas fa-calendar-times"></i>
+                  <div className="d-flex justify-content-around">
+                    <i className="far fa-image"></i>
+                    <i className="fas fa-gift"></i>
+                    <i className="fas fa-question"></i>
+                    <i className="fas fa-smile-beam"></i>
+                    <i className="fas fa-calendar-times"></i>
                     <input
-                      class="btn btn-primary"
+                      className="btn btn-primary"
                       type="submit"
                       value="Twittear"
                     />
@@ -56,15 +56,15 @@ export default function Home() {
         <!---->
         <% tweets.forEach(function(tweet){ %>
         <!--  -->
-        <div class="singleTweet">
-          <div class="row">
-            <div class="col-lg-1">
+        <div className="singleTweet">
+          <div className="row">
+            <div className="col-lg-1">
               <img
                 src="<%- tweet.User.image %>"
                 alt="<%- tweet.User.firstname %> <%- tweet.User.lastname %>"
               />
             </div>
-            <div class="col-lg-11">
+            <div className="col-lg-11">
               <p>
                 <a href="/users/<%- tweet.User.username %>"
                   ><%- tweet.User.firstname %> <%- tweet.User.lastname %></a
@@ -75,25 +75,25 @@ export default function Home() {
                 >
               </p>
               <p><%- tweet.Text%></p>
-              <div class="d-flex justify-content-around">
-                <em><i class="far fa-comment"></i> 20</em>
-                <em><i class="fas fa-retweet"></i> 5</em>
+              <div className="d-flex justify-content-around">
+                <em><i className="far fa-comment"></i> 20</em>
+                <em><i className="fas fa-retweet"></i> 5</em>
                 <% if (tweet.Likes.includes(passportUser._id)) { %>
                 <em
                   ><a href="/likes/destroy/<%- tweet.id %>"
-                    ><i class="fas fa-heart redHeart"></i
+                    ><i className="fas fa-heart redHeart"></i
                   ></a>
                   <%- tweet.Likes.length %></em
                 >
                 <% } else { %>
                 <em
                   ><a href="/likes/update/<%- tweet.id %>"
-                    ><i class="far fa-heart"></i
+                    ><i className="far fa-heart"></i
                   ></a>
                   <%- tweet.Likes.length %></em
                 >
                 <% } %>
-                <i class="fas fa-share"></i>
+                <i className="fas fa-share"></i>
               </div>
             </div>
           </div>
@@ -105,47 +105,47 @@ export default function Home() {
         <p>No hay tweets, se el primero</p>
         <% } %> 
       </div>*/}
-          {/* <div class="col-lg-3">
-        <div id="buscador" class="form-floating">
+          {/* <div className="col-lg-3">
+        <div id="buscador" className="form-floating">
           <input
             type="text"
-            class="form-control"
+            className="form-control"
             id="search"
             placeholder="Buscar en twitter"
           />
           <label for="search"
-            ><i class="fas fa-search"></i> Buscar en Twitter</label
+            ><i className="fas fa-search"></i> Buscar en Twitter</label
           >
         </div>
 
         <div id="tendencias">
           <h3>Tendencias para ti</h3>
 
-          <div class="noticia">
+          <div className="noticia">
             <p>Politíca - Tendencias</p>
             <h4>Ortega</h4>
             <p>36,3 mil Tweets</p>
           </div>
 
-          <div class="noticia">
+          <div className="noticia">
             <p>Tendencia en Uruguay</p>
             <h4>URSS</h4>
             <p>2.093 Tweets</p>
           </div>
 
-          <div class="noticia">
+          <div className="noticia">
             <p>Tendencia en Uruguay</p>
             <h4>#Arcane</h4>
             <p>120 mil Tweets</p>
           </div>
 
-          <div class="noticia">
+          <div className="noticia">
             <p>Entretenimiento - Tendencias</p>
             <h4>#Eternals</h4>
             <p>36,3 mil Tweets</p>
           </div>
 
-          <div class="noticia">
+          <div className="noticia">
             <p>Tendencia en Uruguay</p>
             <h4>Teletón</h4>
             <p>6.678 Tweets</p>
@@ -157,7 +157,7 @@ export default function Home() {
           <h3>A quién seguir</h3>
 
           <% users.forEach(function(User){ %>
-          <div class="toFollow">
+          <div className="toFollow">
             <img
               src="<%- User.image %>"
               alt="<%- User.firstname%> <%- User.lastname %>"
@@ -167,7 +167,7 @@ export default function Home() {
                 <a href="/users/<%- User.username %>"
                   ><%- User.firstname.substr(0, 1)%>. <%-
                   User.lastname.substr(0, 6 ) %></a
-                ><i class="fa fa-check-circle"></i>
+                ><i className="fa fa-check-circle"></i>
               </h5>
               <p>@<%- User.username %></p>
               <p>People</p>
@@ -175,13 +175,13 @@ export default function Home() {
             <div id="followBtn">
               <% if (passportUser.following.includes(User._id)) { %>
               <a
-                class="btn btn-outline-danger whiteFont"
+                className="btn btn-outline-danger whiteFont"
                 href="/users/destroyFriendship/<%- User.username %>"
                 >Unfollow</a
               >
               <% } else { %>
               <a
-                class="btn btn-light"
+                className="btn btn-light"
                 href="/users/following/<%- User.username %>"
                 >Follow</a
               >

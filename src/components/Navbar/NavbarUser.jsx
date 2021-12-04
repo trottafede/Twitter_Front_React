@@ -3,7 +3,7 @@ import React from "react";
 export default function NavbarUser() {
   return (
     <div>
-      {/* <% if (passportUser) { %> */}
+      {/* <% if (passportUser) { %>
       <div id="activeUser">
         <div id="leftSideActiveUser">
           <img
@@ -11,15 +11,15 @@ export default function NavbarUser() {
             alt="<%- passportUser.firstname %> <%- passportUser.lastname %>"
           />
           <div id="activeUserInfo">
-            {/* <p><%- passportUser.firstname %> <%- passportUser.lastname %></p>
-        <em>@<%- passportUser.username %></em> */}
+            <p><%- passportUser.firstname %> <%- passportUser.lastname %></p>
+        <em>@<%- passportUser.username %></em>
           </div>
         </div>
         <a href="/logout">
           <i className="fas fa-times-circle"></i>
         </a>
       </div>
-      {/* <% } %> */}
+      <% } %> */}
     </div>
   );
 }

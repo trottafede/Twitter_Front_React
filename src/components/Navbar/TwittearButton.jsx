@@ -6,7 +6,7 @@ export default function TwittearButton() {
       <div
         className="modal fade bgGrey"
         id="twittearModal"
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="twittearModalLabel"
         aria-hidden="true"
       >
