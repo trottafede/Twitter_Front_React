@@ -4,12 +4,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { useLocation, useNavigate } from "react-router";
 
-import useAuth from "../../hooks/useAuth";
-
 export default function Login() {
-  const auth = useAuth();
-  console.log(auth);
-
   const dispatch = useDispatch();
   const navigate = useNavigate();
   let location = useLocation();
@@ -39,9 +34,11 @@ export default function Login() {
 
         if (response.status === 200) {
           const { token } = response.data;
+          const { user } = response.data;
           dispatch({
             type: "ADD_USER",
-            payload: token,
+            token,
+            user,
           });
           handleIsLoading();
           navigate(from, { replace: true });
@@ -49,7 +46,6 @@ export default function Login() {
       } catch (error) {
         alert(error);
         handleIsLoading();
-        console.error(error);
       }
     };
 

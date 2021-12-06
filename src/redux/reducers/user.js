@@ -6,13 +6,13 @@ export default function taskReducer(state = {}, action) {
       // Retornar el nuevo estado.
       const newUser = {
         id: uuidv4(),
-        token: action.payload,
+        token: action.token,
+        user: action.user,
       };
       return newUser;
     case "REMOVE_USER":
-      // Remover del array de tareas la tarea del action.payload.
-      // Retornar el nuevo estado.
-      break;
+      const emptyState = {};
+      return emptyState;
     default:
       return state;
   }

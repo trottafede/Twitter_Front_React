@@ -1,6 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 
 export default function TwittearButton() {
+  const { user } = useSelector((state) => state.user);
   return (
     <form action="/tweets/store" method="post">
       <div
@@ -26,30 +28,30 @@ export default function TwittearButton() {
               ></button>
             </div>
             <div className="modal-body">
-              {/* <% if (passportUser) { %> */}
-              <div id="QueEstasPensandoModal">
-                <div className="row">
-                  <div className="col-lg-2">
-                    <img
-                      src="<%- passportUser.image %>"
-                      alt="<%- passportUser.firstname %> <%- passportUser.lastname %>"
-                    />
-                  </div>
-                  <div className="col-lg-10">
-                    <div>
-                      <input
-                        className="form-control"
-                        type="text"
-                        placeholder="Qué estás pensando?"
-                        name="tweet"
-                        id="tweet"
+              {user && (
+                <div id="QueEstasPensandoModal">
+                  <div className="row">
+                    <div className="col-lg-2">
+                      <img
+                        src={user.image}
+                        alt={user.firstname + " " + user.lastname}
                       />
-                      <p>Cualquier persona puede responder</p>
+                    </div>
+                    <div className="col-lg-10">
+                      <div>
+                        <input
+                          className="form-control"
+                          type="text"
+                          placeholder="Qué estás pensando?"
+                          name="tweet"
+                          id="tweet"
+                        />
+                        <p>Cualquier persona puede responder</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              {/* <% } %> */}
+              )}
             </div>
             <div className="modal-footer d-flex justify-content-around">
               <i className="far fa-image"></i>

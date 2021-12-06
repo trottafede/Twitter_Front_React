@@ -1,25 +1,33 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function NavbarUser() {
+  const dispatch = useDispatch();
+  const { user } = useSelector((state) => state.user);
+
+  const handleLogout = () => {
+    dispatch({
+      type: "REMOVE_USER",
+    });
+  };
   return (
     <div>
-      {/* <% if (passportUser) { %>
-      <div id="activeUser">
-        <div id="leftSideActiveUser">
-          <img
-            src="<%- passportUser.image %>"
-            alt="<%- passportUser.firstname %> <%- passportUser.lastname %>"
-          />
-          <div id="activeUserInfo">
-            <p><%- passportUser.firstname %> <%- passportUser.lastname %></p>
-        <em>@<%- passportUser.username %></em>
+      {user && (
+        <div id="activeUser">
+          <div id="leftSideActiveUser">
+            <img src={user.image} alt={user.firstname + " " + user.lastname} />
+            <div id="activeUserInfo">
+              <p>
+                {user.firstname} {user.lastname}
+              </p>
+              <em>@{user.username}</em>
+            </div>
           </div>
+          <span>
+            <i onClick={handleLogout} className="fas fa-times-circle"></i>
+          </span>
         </div>
-        <a href="/logout">
-          <i className="fas fa-times-circle"></i>
-        </a>
-      </div>
-      <% } %> */}
+      )}
     </div>
   );
 }
