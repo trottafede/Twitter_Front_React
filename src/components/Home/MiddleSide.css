@@ -1,0 +1,442 @@
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  #middleSideHome #inicio h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  #middleSideHome #QueEstasPensando img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+
+  #middleSideHome #QueEstasPensando input[type="text"] {
+    padding: 10px;
+    color: #fff;
+    background-color: transparent;
+  }
+
+  #middleSideHome #QueEstasPensando p {
+    margin-bottom: 0;
+    padding: 5px;
+    color: blue;
+  }
+  #middleSideHome #QueEstasPensando i {
+    color: rgb(168, 168, 219);
+    font-size: 1.3rem;
+  }
+
+  #middleSideHome #QueEstasPensando input[type="button"] {
+    width: 100px;
+    margin-left: 100px;
+  }
+
+  #middleSideHome hr {
+    color: #fff;
+  }
+
+  #middleSideHome .redHeart {
+    color: red !important;
+  }
+
+  #middleSideHome .whiteFont {
+    color: #fff !important;
+  }
+
+  /* Tweeeeeeeet-------------------------------------------------------------------------------- */
+  #middleSideHome .singleTweet {
+    margin-bottom: 30px;
+    transition: 1.2s;
+    padding: 10px;
+  }
+  #middleSideHome .singleTweet a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #middleSideHome .singleTweet a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  #middleSideHome .singleTweet:hover {
+    background-color: rgb(31, 30, 30);
+    cursor: pointer;
+  }
+  #middleSideHome .singleTweet img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  #middleSideHome .singleTweet em {
+    color: grey;
+  }
+  #middleSideHome .singleTweet p {
+    color: #fff;
+    font-size: 0.938rem;
+    margin-bottom: 4px;
+    margin-left: 30px;
+  }
+
+  #middleSideHome .singleTweet i {
+    margin-top: 10px;
+    color: grey;
+  }
+  /* Tweeeeeeeet-------------------------------------------------------------------------------- */
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #middleSideHome #inicio h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  #middleSideHome #QueEstasPensando img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+
+  #middleSideHome #QueEstasPensando input[type="text"] {
+    padding: 10px;
+    color: #fff;
+    background-color: transparent;
+  }
+
+  #middleSideHome #QueEstasPensando p {
+    margin-bottom: 0;
+    padding: 5px;
+    color: blue;
+  }
+  #middleSideHome #QueEstasPensando i {
+    color: rgb(168, 168, 219);
+    font-size: 1.3rem;
+  }
+
+  #middleSideHome #QueEstasPensando input[type="button"] {
+    width: 100px;
+    margin-left: 100px;
+  }
+
+  #middleSideHome hr {
+    color: #fff;
+  }
+
+  #middleSideHome .redHeart {
+    color: red !important;
+  }
+
+  #middleSideHome .whiteFont {
+    color: #fff !important;
+  }
+
+  /* Tweeeeeeeet-------------------------------------------------------------------------------- */
+  #middleSideHome .singleTweet {
+    margin-bottom: 30px;
+    transition: 1.2s;
+    padding: 10px;
+  }
+  #middleSideHome .singleTweet a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #middleSideHome .singleTweet a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  #middleSideHome .singleTweet:hover {
+    background-color: rgb(31, 30, 30);
+    cursor: pointer;
+  }
+  #middleSideHome .singleTweet img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  #middleSideHome .singleTweet em {
+    color: grey;
+  }
+  #middleSideHome .singleTweet p {
+    color: #fff;
+    font-size: 0.938rem;
+    margin-bottom: 4px;
+    margin-left: 30px;
+  }
+
+  #middleSideHome .singleTweet i {
+    margin-top: 10px;
+    color: grey;
+  }
+  /* Tweeeeeeeet-------------------------------------------------------------------------------- */
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  #middleSideHome #inicio h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  #middleSideHome #QueEstasPensando img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+
+  #middleSideHome #QueEstasPensando input[type="text"] {
+    padding: 10px;
+    color: #fff;
+    background-color: transparent;
+  }
+
+  #middleSideHome #QueEstasPensando p {
+    margin-bottom: 0;
+    padding: 5px;
+    color: blue;
+  }
+  #middleSideHome #QueEstasPensando i {
+    color: rgb(168, 168, 219);
+    font-size: 1.3rem;
+  }
+
+  #middleSideHome #QueEstasPensando input[type="button"] {
+    width: 100px;
+    margin-left: 100px;
+  }
+
+  #middleSideHome hr {
+    color: #fff;
+  }
+
+  #middleSideHome .redHeart {
+    color: red !important;
+  }
+
+  #middleSideHome .whiteFont {
+    color: #fff !important;
+  }
+
+  /* Tweeeeeeeet-------------------------------------------------------------------------------- */
+  #middleSideHome .singleTweet {
+    margin-bottom: 30px;
+    transition: 1.2s;
+    padding: 10px;
+  }
+  #middleSideHome .singleTweet a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #middleSideHome .singleTweet a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  #middleSideHome .singleTweet:hover {
+    background-color: rgb(31, 30, 30);
+    cursor: pointer;
+  }
+  #middleSideHome .singleTweet img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  #middleSideHome .singleTweet em {
+    color: grey;
+  }
+  #middleSideHome .singleTweet p {
+    color: #fff;
+    font-size: 0.938rem;
+    margin-bottom: 4px;
+    margin-left: 30px;
+  }
+
+  #middleSideHome .singleTweet i {
+    margin-top: 10px;
+    color: grey;
+  }
+  /* Tweeeeeeeet-------------------------------------------------------------------------------- */
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #middleSideHome #inicio h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  #middleSideHome #QueEstasPensando img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+
+  #middleSideHome #QueEstasPensando input[type="text"] {
+    padding: 10px;
+    color: #fff;
+    background-color: transparent;
+  }
+
+  #middleSideHome #QueEstasPensando p {
+    margin-bottom: 0;
+    padding: 5px;
+    color: blue;
+  }
+  #middleSideHome #QueEstasPensando i {
+    color: rgb(168, 168, 219);
+    font-size: 1.3rem;
+  }
+
+  #middleSideHome #QueEstasPensando input[type="button"] {
+    width: 100px;
+    margin-left: 100px;
+  }
+
+  #middleSideHome hr {
+    color: #fff;
+  }
+
+  #middleSideHome .redHeart {
+    color: red !important;
+  }
+
+  #middleSideHome .whiteFont {
+    color: #fff !important;
+  }
+
+  /* Tweeeeeeeet-------------------------------------------------------------------------------- */
+  #middleSideHome .singleTweet {
+    margin-bottom: 30px;
+    transition: 1.2s;
+    padding: 10px;
+  }
+  #middleSideHome .singleTweet a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #middleSideHome .singleTweet a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  #middleSideHome .singleTweet:hover {
+    background-color: rgb(31, 30, 30);
+    cursor: pointer;
+  }
+  #middleSideHome .singleTweet img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  #middleSideHome .singleTweet em {
+    color: grey;
+  }
+  #middleSideHome .singleTweet p {
+    color: #fff;
+    font-size: 0.938rem;
+    margin-bottom: 4px;
+    margin-left: 30px;
+  }
+
+  #middleSideHome .singleTweet i {
+    margin-top: 10px;
+    color: grey;
+  }
+  /* Tweeeeeeeet-------------------------------------------------------------------------------- */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  #middleSideHome #inicio h1 {
+    font-size: 1.5rem;
+    color: #fff;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  #middleSideHome #QueEstasPensando img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+  }
+
+  #middleSideHome #QueEstasPensando input[type="text"] {
+    padding: 10px;
+    color: #fff;
+    background-color: transparent;
+  }
+
+  #middleSideHome #QueEstasPensando p {
+    margin-bottom: 0;
+    padding: 5px;
+    color: blue;
+  }
+  #middleSideHome #QueEstasPensando i {
+    color: rgb(168, 168, 219);
+    font-size: 1.3rem;
+  }
+
+  #middleSideHome #QueEstasPensando input[type="button"] {
+    width: 100px;
+    margin-left: 100px;
+  }
+
+  #middleSideHome hr {
+    color: #fff;
+  }
+
+  #middleSideHome .redHeart {
+    color: red !important;
+  }
+
+  #middleSideHome .whiteFont {
+    color: #fff !important;
+  }
+
+  /* Tweeeeeeeet-------------------------------------------------------------------------------- */
+  #middleSideHome .singleTweet {
+    transition: 1.2s;
+    padding: 10px;
+  }
+  #middleSideHome .singleTweet a {
+    text-decoration: none;
+    color: #fff;
+  }
+  #middleSideHome .singleTweet a:hover {
+    text-decoration: underline;
+    color: #fff;
+  }
+
+  #middleSideHome .singleTweet:hover {
+    background-color: rgb(31, 30, 30);
+    cursor: pointer;
+  }
+  #middleSideHome .singleTweet img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+  }
+  #middleSideHome .singleTweet em {
+    color: grey;
+  }
+  #middleSideHome .singleTweet p {
+    color: #fff;
+    font-size: 0.938rem;
+    margin-bottom: 4px;
+    margin-left: 30px;
+  }
+
+  #middleSideHome .singleTweet i {
+    margin-top: 10px;
+    color: grey;
+  }
+  /* Tweeeeeeeet-------------------------------------------------------------------------------- */
+}
