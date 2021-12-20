@@ -10,7 +10,6 @@ export default function RightSide() {
   const { token } = useSelector((state) => state.user);
   const { user } = useSelector((state) => state.user);
 
-  console.log(user);
   useEffect(() => {
     let url = `${process.env.REACT_APP_API_BACKEND}/api/timeline`;
     const fetchTimeline = async () => {
@@ -27,7 +26,7 @@ export default function RightSide() {
     };
     fetchTimeline();
     return () => {};
-  }, []);
+  }, [token]);
 
   return (
     <div className="col-lg-3">

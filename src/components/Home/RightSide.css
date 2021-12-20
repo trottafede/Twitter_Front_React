@@ -1,16 +1,198 @@
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
+  #buscador {
+    display: none;
+  }
+  #tendencias {
+    display: none;
+  }
+  #whoToFollow {
+    display: none;
+  }
+  #copyright {
+    display: none;
+  }
 }
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
+  #buscador {
+    display: none;
+  }
+  #tendencias {
+    display: none;
+  }
+  #whoToFollow {
+    display: none;
+  }
+  #copyright {
+    display: none;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
+  #buscador {
+    display: none;
+  }
+  #tendencias {
+    display: none;
+  }
+  #whoToFollow {
+    display: none;
+  }
+  #copyright {
+    display: none;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Right side-------------------------------------------------------------------------------- */
+  #buscador {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  #buscador input {
+    background-color: transparent;
+    border-radius: 20px;
+    border-color: var(--border-radius-color);
+  }
+
+  #buscador label {
+    color: var(--font-grey);
+  }
+  #buscador i {
+    margin-right: 15px;
+  }
+
+  #tendencias {
+    color: var(--font-Color);
+    background-color: var(--tendencias-bg-color);
+    border-radius: 20px;
+    padding-bottom: 10px;
+  }
+
+  #tendencias h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+  }
+
+  .noticia {
+    color: var(--font-Color);
+    margin-bottom: 20px;
+    padding: 0 20px;
+    transition: 1.2s;
+  }
+
+  .noticia:hover {
+    background-color: rgba(119, 118, 118, 0.89);
+    cursor: pointer;
+  }
+  .noticia h4 {
+    font-size: 1rem;
+    margin-bottom: 0;
+  }
+  .noticia p {
+    margin-bottom: 0;
+    font-size: 0.94rem;
+    color: var(--noticias-font-color-p);
+  }
+
+  #tendencias a {
+    text-decoration: none;
+    color: var(--tendencias-font-color-a);
+    padding: 20px;
+  }
+
+  /* ------------------------ */
+
+  #whoToFollow {
+    margin-top: 20px;
+    color: var(--font-Color);
+    background-color: var(--tendencias-bg-color);
+    border-radius: 20px;
+    padding: 20px 0;
+  }
+
+  #whoToFollow h3 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-left: 20px;
+  }
+  #whoToFollow .toFollow {
+    margin-bottom: 20px;
+    transition: 1.2s;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+  }
+
+  #whoToFollow .toFollow:hover {
+    background-color: rgba(119, 118, 118, 0.89);
+    cursor: pointer;
+  }
+
+  #whoToFollow .toFollow img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-block;
+    /* margin-left: 10px; */
+  }
+
+  #userInfo {
+    /* margin-left: 10px; */
+    display: inline-block;
+  }
+  #userInfo h5 a {
+    color: #fff !important;
+  }
+  #userInfo h5 a:hover {
+    text-decoration: underline;
+  }
+
+  #followBtn {
+    /* margin-left: 10px; */
+    display: inline-block;
+  }
+
+  #whoToFollow .toFollow h5 {
+    font-size: 1rem;
+  }
+
+  #whoToFollow .toFollow p {
+    font-size: 0.94rem;
+    color: var(--noticias-font-color-p);
+    margin-bottom: 0;
+  }
+
+  #whoToFollow .toFollow a {
+    /* margin-left: 20px; */
+    font-size: 0.9rem;
+    height: 40px;
+    color: black;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px;
+  }
+
+  #whoToFollow a {
+    text-decoration: none;
+    color: var(--tendencias-font-color-a);
+    padding: 20px;
+  }
+
+  #copyright {
+    padding: 10px;
+  }
+  #copyright p {
+    color: var(--noticias-font-color-p);
+    font-size: 0.84rem;
+  }
+
+  /* Right Side-------------------------------------------------------------------------------- */
 }
 
 /* Extra large devices (large desktops, 1200px and up) */

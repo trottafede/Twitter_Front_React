@@ -1,0 +1,103 @@
+:root {
+  /* Buscador */
+  --border-radius-color: rgba(42, 42, 243, 0.671);
+
+  /* Tendencias */
+  --tendencias-bg-color: rgba(87, 87, 87, 0.5);
+  --tendencias-font-color-a: rgb(153, 177, 238);
+  /* Noticias */
+  --noticias-font-color-p: rgb(165, 164, 164);
+  --main-bg-color: black;
+  --font-Color: #fff;
+  --font-grey: grey;
+}
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    background-color: var(--main-bg-color) !important;
+  }
+
+  #twitterBG {
+    background-image: url("https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png");
+    height: 96vh;
+  }
+
+  #imgContainer {
+    display: flex; /* establish flex container */
+    flex-direction: column; /* make main axis vertical */
+    justify-content: center; /* center items vertically, in this case */
+    align-items: center; /* center items horizontally, in this case */
+    height: 100%;
+  }
+  #twitterBG img {
+    width: auto;
+    height: 250px;
+  }
+
+  #rightSide {
+    padding: 60px;
+    height: 96vh;
+  }
+  #formLogin {
+    margin-top: 60px;
+    color: #fff;
+  }
+
+  #rightSide h1 {
+    color: #fff;
+    font-size: 4rem !important;
+    padding-top: 40px;
+  }
+
+  #rightSide h2 {
+    color: #fff;
+    padding-top: 40px;
+  }
+
+  #rightSide em {
+    display: block;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: rgb(95, 94, 94);
+  }
+
+  #rightSide p {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    color: #fff;
+  }
+
+  #emAboutThings {
+    text-align: center;
+    padding: 5px;
+  }
+  #emAboutThings em {
+    color: grey;
+    margin-left: 20px;
+    font-size: 0.78rem;
+  }
+
+  input[type="text"]:focus,
+  input[type="number"]:focus,
+  input[type="email"]:focus,
+  input[type="password"]:focus {
+    outline: none !important;
+    border: 2px solid rgb(219, 4, 209);
+    box-shadow: 0 0 10px #f1c4e4;
+  }
+}

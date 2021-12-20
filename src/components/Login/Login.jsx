@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { useLocation, useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 export default function Login() {
   const dispatch = useDispatch();
@@ -139,7 +140,7 @@ export default function Login() {
 
             <div className="mb-3">
               <p>
-                Do not have an account? <a href="/signup">Sign Up</a>
+                Do not have an account? <Link to="/signup">Sign Up</Link>
               </p>
             </div>
           </div>
