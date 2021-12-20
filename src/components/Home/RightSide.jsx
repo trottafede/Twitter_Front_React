@@ -19,6 +19,7 @@ export default function RightSide() {
             Authorization: `Bearer ${token}`,
           },
         });
+        console.log(response.data.users);
         setUsers(() => response.data.users);
       } catch (error) {
         console.error(error);
@@ -82,48 +83,49 @@ export default function RightSide() {
 
         {users.length >= 1 ? (
           users.map((User) => (
-            <div key={uuidv4()}>
-              <div className="toFollow">
-                <img
-                  src={User.image}
-                  alt={User.firstname + " " + User.lastname}
-                />
-                <div id="userInfo">
-                  <h5>
-                    <a href="/users/<%- User.username %>">
-                      {User.firstname.substr(0, 1) +
-                        ". " +
-                        User.lastname.substr(0, 6)}
-                    </a>
-                    <i className="fa fa-check-circle"></i>
-                  </h5>
-                  <p>@{User.username}</p>
-                  <p>People</p>
-                </div>
-                <div id="followBtn">
-                  {user.following.includes(User._id) ? (
-                    <a
-                      className="btn btn-outline-danger whiteFont"
-                      href="/users/destroyFriendship/<%- User.username %>"
-                    >
-                      Unfollow
-                    </a>
-                  ) : (
-                    <a
-                      className="btn btn-light"
-                      href="/users/following/<%- User.username %>"
-                    >
-                      Follow
-                    </a>
-                  )}
-                </div>
+            <div key={uuidv4()} className="toFollow">
+              <img
+                src={User.image}
+                alt={User.firstname + " " + User.lastname}
+              />
+              <div id="userInfo">
+                <h5>
+                  <a href="/users/<%- User.username %>">
+                    {User.firstname.substr(0, 1) +
+                      ". " +
+                      User.lastname.substr(0, 6)}
+                  </a>
+                  <i
+                    style={{ color: "skyBlue" }}
+                    className="fa fa-check-circle"
+                  ></i>
+                </h5>
+                <p>@{User.username}</p>
+                <p>People</p>
               </div>
-              <a href="/">Mostrar más</a>
+              <div id="followBtn">
+                {user.following.includes(User._id) ? (
+                  <a
+                    className="btn btn-outline-danger whiteFont"
+                    href="/users/destroyFriendship/<%- User.username %>"
+                  >
+                    Unfollow
+                  </a>
+                ) : (
+                  <a
+                    className="btn btn-light"
+                    href="/users/following/<%- User.username %>"
+                  >
+                    Follow
+                  </a>
+                )}
+              </div>
             </div>
           ))
         ) : (
           <a href="/"> No hay usuarios para seguir</a>
         )}
+        <a href="/">Mostrar más</a>
       </div>
 
       <div id="copyright">

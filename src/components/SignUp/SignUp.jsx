@@ -1,12 +1,73 @@
 import "./SignUp.css";
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useLocation, useNavigate } from "react-router";
+
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 export default function SignUp() {
+  const [firstname, setName] = useState("");
+  const [lastname, setLastName] = useState("");
+  const [username, setUserName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  let location = useLocation();
+  let from = location.state?.from?.pathname || "/";
+
+  const handleIsLoading = () => {
+    setIsLoading((prevState) => !prevState);
+  };
+
+  const handleRegister = () => {
+    handleIsLoading();
+    const url = `${process.env.REACT_APP_API_BACKEND}/api/users/store`;
+    const fetchApi = async () => {
+      try {
+        const response = await axios.post(
+          url,
+          {
+            firstname,
+            lastname,
+            username,
+            email,
+            password,
+          },
+          {
+            headers: {
+              "Content-Type": "application/json",
+            },
+          }
+        );
+
+        if (response.status === 200) {
+          const { token } = response.data;
+          const { user } = response.data;
+          dispatch({
+            type: "ADD_USER",
+            token,
+            user,
+          });
+          handleIsLoading();
+          navigate(from, { replace: true });
+        }
+      } catch (error) {
+        alert(error);
+        handleIsLoading();
+      }
+    };
+
+    fetchApi();
+  };
   return (
-    <div class="container-fluid">
-      <div class="row">
-        <div id="twitterBG" class="col-lg-6">
+    <div className="container-fluid">
+      <div className="row">
+        <div id="twitterBG" className="col-lg-6">
           <div id="imgContainer">
             <img
               src="https://raw.githubusercontent.com/trottafede/TwitterEJS-Noviembre2021/main/public/img/twitterBigBird3.png"
@@ -14,7 +75,7 @@ export default function SignUp() {
             />
           </div>
         </div>
-        <div id="rightSide" class="col-lg-6">
+        <div id="rightSide" className="col-lg-6">
           <img
             width="50px"
             height="50px"
@@ -23,97 +84,121 @@ export default function SignUp() {
           />
 
           <div id="formLogin">
-            <form action="/signup" method="post">
-              <div class="row mb-3">
-                <label for="firstname" class="col-sm-2 col-form-label">
-                  Name
-                </label>
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="firstname"
-                    name="firstname"
-                    required
-                  />
-                </div>
+            <div className="row mb-3">
+              <label htmlFor="firstname" className="col-sm-2 col-form-label">
+                Name
+              </label>
+              <div className="col-sm-10">
+                <input
+                  value={firstname}
+                  onChange={(e) => setName(e.target.value)}
+                  type="text"
+                  className="form-control"
+                  id="firstname"
+                  name="firstname"
+                  required
+                />
               </div>
+            </div>
 
-              <div class="row mb-3">
-                <label for="lastname" class="col-sm-2 col-form-label">
-                  Lastname
-                </label>
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="lastname"
-                    name="lastname"
-                    required
-                  />
-                </div>
+            <div className="row mb-3">
+              <label htmlFor="lastname" className="col-sm-2 col-form-label">
+                Lastname
+              </label>
+              <div className="col-sm-10">
+                <input
+                  value={lastname}
+                  onChange={(e) => setLastName(e.target.value)}
+                  type="text"
+                  className="form-control"
+                  id="lastname"
+                  name="lastname"
+                  required
+                />
               </div>
+            </div>
 
-              <div class="row mb-3">
-                <label for="username" class="col-sm-2 col-form-label">
-                  Username
-                </label>
-                <div class="col-sm-10">
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="username"
-                    name="username"
-                    required
-                  />
-                </div>
+            <div className="row mb-3">
+              <label htmlFor="username" className="col-sm-2 col-form-label">
+                Username
+              </label>
+              <div className="col-sm-10">
+                <input
+                  value={username}
+                  onChange={(e) => setUserName(e.target.value)}
+                  type="text"
+                  className="form-control"
+                  id="username"
+                  name="username"
+                  required
+                />
               </div>
+            </div>
 
-              <div class="row mb-3">
-                <label for="email" class="col-sm-2 col-form-label">
-                  Email
-                </label>
-                <div class="col-sm-10">
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    name="email"
-                    required
-                  />
-                </div>
+            <div className="row mb-3">
+              <label htmlFor="email" className="col-sm-2 col-form-label">
+                Email
+              </label>
+              <div className="col-sm-10">
+                <input
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  type="email"
+                  className="form-control"
+                  id="email"
+                  name="email"
+                  required
+                />
               </div>
+            </div>
 
-              <div class="row mb-3">
-                <label for="password" class="col-sm-2 col-form-label">
-                  Password
-                </label>
-                <div class="col-sm-10">
-                  <input
-                    type="password"
-                    class="form-control"
-                    id="password"
-                    name="password"
-                    required
-                  />
-                </div>
+            <div className="row mb-3">
+              <label htmlFor="password" className="col-sm-2 col-form-label">
+                Password
+              </label>
+              <div className="col-sm-10">
+                <input
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  type="password"
+                  className="form-control"
+                  id="password"
+                  name="password"
+                  required
+                />
               </div>
+            </div>
 
-              <div class="mb-3">
-                <button class="btn btn-primary" type="submit">
-                  Register
-                </button>
-              </div>
+            <div className="mb-3">
+              <button
+                onClick={handleRegister}
+                className="btn btn-primary"
+                type="button"
+              >
+                {isLoading && (
+                  <span
+                    className="spinner-grow spinner-grow-sm"
+                    role="status"
+                    aria-hidden="true"
+                  ></span>
+                )}
+                Register
+              </button>
 
-              <div class="mb-3">
-                <p>
-                  Already have an account? <Link to="/login">Login in</Link>
-                </p>
-              </div>
-            </form>
+              <em>
+                By signing up, you agree to the Terms of Service and Privacy
+                Policy, including Cookie Use.
+              </em>
+            </div>
+
+            <div className="mb-3">
+              <p>
+                Already have an account? <Link to="/login">Log in</Link>
+              </p>
+            </div>
           </div>
         </div>
-        <div id="emAboutThings" class="col-lg-12">
+        <div id="emAboutThings" className="col-lg-12">
           <em>About</em>
           <em>Help Center</em>
           <em>Terms of Service</em>

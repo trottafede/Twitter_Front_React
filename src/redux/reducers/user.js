@@ -9,6 +9,7 @@ export default function taskReducer(state = {}, action) {
         token: action.token,
         user: action.user,
       };
+      console.log(newUser);
       return newUser;
     case "REMOVE_USER":
       const emptyState = {};
