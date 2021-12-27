@@ -4,8 +4,11 @@ import { Link } from "react-router-dom";
 
 import NavbarUser from "./NavbarUser";
 import TwittearButton from "./TwittearButton";
+import { useSelector } from "react-redux";
 
 export default function Navbar() {
+  const { user } = useSelector((state) => state.user);
+
   return (
     <nav>
       <ul>
@@ -51,7 +54,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/users/user.username">
+          <Link to={`users/${user.username}`}>
             <i className="far fa-user"></i>{" "}
             <span className="navTextToHide">Perfil</span>
           </Link>

@@ -6,6 +6,7 @@ import NotFound from "./components/NotFound";
 import PrivateRoute from "./routes/PrivateRoute";
 import PublicRoute from "./routes/PublicRoute";
 import SignUp from "./components/SignUp/SignUp";
+import Profile from "./components/Profile/Profile";
 function App() {
   return (
     <div className="App">
@@ -22,6 +23,11 @@ function App() {
           <Route path="/" element={<PrivateRoute />}>
             <Route path="/" element={<Home />} />
           </Route>
+
+          <Route path="/users/:username" element={<PrivateRoute />}>
+            <Route path="/users/:username" element={<Profile />} />
+          </Route>
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -11,8 +11,15 @@ export default function Home() {
           <Navbar />
         </div>
 
-        <MiddleSide />
-        <RightSide />
+        <div
+          id="middleSideHome"
+          className="col-lg-6 col-md-11 col-sm-11 col-11"
+        >
+          <MiddleSide />
+        </div>
+        <div class="col-lg-3">
+          <RightSide />
+        </div>
       </div>
     </div>
   );

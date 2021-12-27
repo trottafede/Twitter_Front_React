@@ -30,7 +30,7 @@ export default function TweetsHome() {
   }, [token, updatePage]);
 
   return (
-    <div id="middleSideHome" className="col-lg-6 col-md-11 col-sm-11 col-11">
+    <div>
       <div id="inicio">
         <h1>Inicio</h1>
       </div>

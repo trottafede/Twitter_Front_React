@@ -30,7 +30,7 @@ export default function RightSide() {
   }, [token]);
 
   return (
-    <div className="col-lg-3">
+    <div>
       <div id="buscador" className="form-floating">
         <input
           type="text"
