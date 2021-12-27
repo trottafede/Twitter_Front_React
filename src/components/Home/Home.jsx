@@ -17,7 +17,7 @@ export default function Home() {
         >
           <MiddleSide />
         </div>
-        <div class="col-lg-3">
+        <div className="col-lg-3">
           <RightSide />
         </div>
       </div>

@@ -19,7 +19,6 @@ export default function RightSide() {
             Authorization: `Bearer ${token}`,
           },
         });
-        console.log(response.data.users);
         setUsers(() => response.data.users);
       } catch (error) {
         console.error(error);

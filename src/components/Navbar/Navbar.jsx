@@ -18,7 +18,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to="/">
+          <Link to={"/"}>
             <i className="fas fa-home"></i>{" "}
             <span className="navTextToHide">Inicio</span>
           </Link>
@@ -54,7 +54,7 @@ export default function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to={`users/${user.username}`}>
+          <Link to={`/users/${user.username}`}>
             <i className="far fa-user"></i>{" "}
             <span className="navTextToHide">Perfil</span>
           </Link>

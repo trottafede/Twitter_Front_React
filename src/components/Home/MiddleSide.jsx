@@ -54,7 +54,7 @@ export default function TweetsHome() {
                   </a>
                   <em>
                     {" "}
-                    @ {tweet.User.username + " - "}
+                    @{tweet.User.username + " - "}
                     {new Date(tweet.createdAt).toLocaleString("es-US")}
                   </em>
                 </p>

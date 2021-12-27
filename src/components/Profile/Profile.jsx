@@ -7,6 +7,7 @@ import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import Navbar from "../Navbar/Navbar";
 import RightSide from "../Home/RightSide";
+import EditProfile from "./EditProfile";
 export default function Profile() {
   const [user, setUser] = useState(null);
   const loggedUser = useSelector((state) => state.user);
@@ -30,7 +31,7 @@ export default function Profile() {
     };
     fetchUser();
     return () => {};
-  }, [username, token]);
+  }, [username, token, loggedUser]);
   return (
     <div>
       {user && (
@@ -108,108 +109,7 @@ export default function Profile() {
                 </div>
                 <hr />
               </div>
-              <div
-                className="modal fade bgGrey"
-                id="editProfileModal"
-                tabIndex="-1"
-                aria-labelledby="editProfileModalLabel"
-                aria-hidden="true"
-              >
-                <div className="modal-dialog">
-                  <div className="modal-content bgBlack">
-                    <div className="modal-header">
-                      <h5 className="modal-title" id="editProfileModalLabel">
-                        Editar Perfil
-                      </h5>
-                      <button
-                        type="button"
-                        className="btn-close"
-                        data-bs-dismiss="modal"
-                        aria-label="Close"
-                      ></button>
-                    </div>
-                    <div className="modal-body">
-                      <form action="/users/<%- user.username %> " method="post">
-                        <div className="mb-3">
-                          <label htmlFor="firstname" className="col-form-label">
-                            Nombre
-                          </label>
-                          <input
-                            type="text"
-                            value={user.firstname}
-                            name="firstname"
-                            className="form-control"
-                            id="firstname"
-                          />
-                        </div>
-                        <div className="mb-3">
-                          <label htmlFor="lastname" className="col-form-label">
-                            Apellido
-                          </label>
-                          <input
-                            type="text"
-                            value={user.lastname}
-                            name="lastname"
-                            className="form-control"
-                            id="lastname"
-                          />
-                        </div>
-                        <div className="mb-3">
-                          <label htmlFor="age" className="col-form-label">
-                            Edad
-                          </label>
-                          <input
-                            value={user.age}
-                            type="number"
-                            name="age"
-                            className="form-control"
-                            id="age"
-                          />
-                        </div>
-                        <div className="mb-3">
-                          <label
-                            htmlFor="description"
-                            className="col-form-label"
-                          >
-                            Descripción
-                          </label>
-                          <input
-                            value={user.description}
-                            type="text"
-                            name="description"
-                            className="form-control"
-                            id="description"
-                          />
-                        </div>
-                        <div className="mb-3">
-                          <label htmlFor="image" className="col-form-label">
-                            Imágen
-                          </label>
-                          <input
-                            value={user.image}
-                            type="text"
-                            name="image"
-                            className="form-control"
-                            id="image"
-                          />
-                        </div>
-                        <div className="modal-footer">
-                          <button
-                            type="button"
-                            className="btn btn-secondary"
-                            data-bs-dismiss="modal"
-                          >
-                            Close
-                          </button>
-                          <button type="submit" className="btn btn-primary">
-                            Guardar
-                          </button>
-                        </div>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <EditProfile user={user} />
               {user.tweetsList.length > 0 ? (
                 user.tweetsList.map((tweet) => (
                   <div key={uuidv4()} className="singleTweet">
@@ -222,7 +122,7 @@ export default function Profile() {
                       </div>
                       <div className="col-lg-11">
                         <p>
-                          {user.firstname + " " + user.lastname}
+                          {user.firstname + " " + user.lastname + " "}
                           <em>
                             @{user.username} -{" "}
                             {new Date(tweet.createdAt).toLocaleString("es-US")}
@@ -240,14 +140,14 @@ export default function Profile() {
                             <em>
                               <a href="/likes/destroy/<%- tweet.id %>">
                                 <i className="fas fa-heart redHeart"></i>
-                              </a>
+                              </a>{" "}
                               {tweet.Likes.length}{" "}
                             </em>
                           ) : (
                             <em>
                               <a href="/likes/update/<%- tweet.id %>">
                                 <i className="far fa-heart"></i>
-                              </a>
+                              </a>{" "}
                               {tweet.Likes.length}{" "}
                             </em>
                           )}
@@ -262,7 +162,7 @@ export default function Profile() {
                 <p>You have no tweets</p>
               )}
             </div>
-            <div class="col-lg-3">
+            <div className="col-lg-3">
               <RightSide />
             </div>
           </div>
