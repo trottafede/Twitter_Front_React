@@ -1,15 +1,11 @@
 import axios from "axios";
-import React from "react";
-import { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { useLocation, useNavigate } from "react-router";
 
 export default function EditProfile({ user }) {
   const { token } = useSelector((state) => state.user);
 
-  const navigate = useNavigate();
   const dispatch = useDispatch();
 
   const [firstname, setFirstName] = useState(user.firstname);
@@ -22,9 +18,6 @@ export default function EditProfile({ user }) {
   const [isLoading, setIsLoading] = useState(false);
 
   const { username } = useParams();
-
-  let location = useLocation();
-  let from = location.state?.from?.pathname || `/users/${user.username}`;
 
   const handleIsLoading = () => {
     setIsLoading((prevState) => !prevState);
@@ -54,8 +47,6 @@ export default function EditProfile({ user }) {
         });
         handleIsLoading();
         document.getElementById("closeModal").click();
-
-        // navigate(from, { replace: true });
       }
     } catch (error) {
       console.error(error);
@@ -149,31 +140,31 @@ export default function EditProfile({ user }) {
                 id="image"
               />
             </div>
-            <div className="modal-footer">
-              <button
-                id="closeModal"
-                type="button"
-                className="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
+          </div>
+          <div className="modal-footer">
+            <button
+              id="closeModal"
+              type="button"
+              className="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
 
-              <button
-                onClick={handleEditProfile}
-                className="btn btn-primary"
-                type="button"
-              >
-                {isLoading && (
-                  <span
-                    className="spinner-grow spinner-grow-sm"
-                    role="status"
-                    aria-hidden="true"
-                  ></span>
-                )}
-                Guardar
-              </button>
-            </div>
+            <button
+              onClick={handleEditProfile}
+              className="btn btn-primary"
+              type="button"
+            >
+              {isLoading && (
+                <span
+                  className="spinner-grow spinner-grow-sm"
+                  role="status"
+                  aria-hidden="true"
+                ></span>
+              )}
+              Guardar
+            </button>
           </div>
         </div>
       </div>

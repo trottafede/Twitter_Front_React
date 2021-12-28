@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import LikeButton from "./LikeButton";
 import CreateTweet from "./CreateTweet";
+import { Link } from "react-router-dom";
 
 export default function TweetsHome() {
   const [tweets, setTweets] = useState([]);
@@ -49,9 +50,10 @@ export default function TweetsHome() {
               </div>
               <div className="col-lg-11 col-md-11 col-sm-11 col-11">
                 <p>
-                  <a href="/users/tweet.User.username">
+                  <Link to={`/users/${tweet.User.username}`}>
                     {tweet.User.firstname + " " + tweet.User.lastname}
-                  </a>
+                  </Link>
+
                   <em>
                     {" "}
                     @{tweet.User.username + " - "}

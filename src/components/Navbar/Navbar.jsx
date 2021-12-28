@@ -75,7 +75,7 @@ export default function Navbar() {
           href="/"
           draggable="false"
         >
-          <span id="twitterText">Twittear</span>
+          <span id="twitterText">Twittear </span>
           <span id="twitterFeather">
             <i className="fas fa-feather-alt"></i>
           </span>

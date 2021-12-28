@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 import Navbar from "../Navbar/Navbar";
 import RightSide from "../Home/RightSide";
 import EditProfile from "./EditProfile";
+import Follow from "../Follow";
 export default function Profile() {
   const [user, setUser] = useState(null);
   const loggedUser = useSelector((state) => state.user);
@@ -37,10 +38,10 @@ export default function Profile() {
       {user && (
         <div className="container">
           <div className="row">
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-md-1 col-sm-1 col-1">
               <Navbar />
             </div>
-            <div className="col-lg-6">
+            <div className="col-lg-6 col-md-11 col-sm-11 col-11">
               <div id="inicio">
                 <h1>{user.firstname + " " + user.lastname}</h1>
               </div>
@@ -67,22 +68,8 @@ export default function Profile() {
                         </a>
                       </div>
                     ) : (
-                      <div className="text-end">
-                        {loggedUser.user.following.includes(user._id) ? (
-                          <a
-                            className="followButton btn btn-outline-danger whiteFont"
-                            href="/users/destroyFriendship/<%- user.username %>"
-                          >
-                            Unfollow
-                          </a>
-                        ) : (
-                          <a
-                            className="followButton btn btn-light"
-                            href="/users/following/<%- user.username %>"
-                          >
-                            Follow
-                          </a>
-                        )}
+                      <div className="text-end followButton">
+                        <Follow User={user} />
                       </div>
                     )}
                     <div id="contactInfo">
@@ -114,13 +101,13 @@ export default function Profile() {
                 user.tweetsList.map((tweet) => (
                   <div key={uuidv4()} className="singleTweet">
                     <div className="row">
-                      <div className="col-lg-1">
+                      <div className="col-lg-1 col-md-1 col-sm-1 col-1">
                         <img
                           src={user.image}
                           alt={user.firstname + " " + user.lastname}
                         />
                       </div>
-                      <div className="col-lg-11">
+                      <div className="col-lg-11 col-md-11 col-sm-11 col-11">
                         <p>
                           {user.firstname + " " + user.lastname + " "}
                           <em>

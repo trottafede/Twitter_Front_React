@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { v4 as uuidv4 } from "uuid";
 import axios from "axios";
+import { Link } from "react-router-dom";
+import Follow from "../Follow";
 
 export default function RightSide() {
   const [users, setUsers] = useState([]);
@@ -26,8 +28,9 @@ export default function RightSide() {
     };
     fetchTimeline();
     return () => {};
-  }, [token]);
+  }, [token, user]);
 
+  console.log(user);
   return (
     <div>
       <div id="buscador" className="form-floating">
@@ -89,11 +92,12 @@ export default function RightSide() {
               />
               <div id="userInfo">
                 <h5>
-                  <a href="/users/<%- User.username %>">
+                  <Link to={`/users/${User.username}`}>
                     {User.firstname.substr(0, 1) +
                       ". " +
                       User.lastname.substr(0, 6)}
-                  </a>
+                  </Link>
+
                   <i
                     style={{ color: "skyBlue" }}
                     className="fa fa-check-circle"
@@ -103,21 +107,7 @@ export default function RightSide() {
                 <p>People</p>
               </div>
               <div id="followBtn">
-                {user.following.includes(User._id) ? (
-                  <a
-                    className="btn btn-outline-danger whiteFont"
-                    href="/users/destroyFriendship/<%- User.username %>"
-                  >
-                    Unfollow
-                  </a>
-                ) : (
-                  <a
-                    className="btn btn-light"
-                    href="/users/following/<%- User.username %>"
-                  >
-                    Follow
-                  </a>
-                )}
+                <Follow User={User} />
               </div>
             </div>
           ))
