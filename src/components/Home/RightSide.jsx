@@ -30,7 +30,6 @@ export default function RightSide() {
     return () => {};
   }, [token, user]);
 
-  console.log(user);
   return (
     <div>
       <div id="buscador" className="form-floating">

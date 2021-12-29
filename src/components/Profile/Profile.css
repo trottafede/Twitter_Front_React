@@ -126,7 +126,7 @@
   }
 
   .redHeart {
-    color: red !important;
+    color: rgb(249, 24, 128) !important;
   }
 }
 /* Small devices (landscape phones, 576px and up) */
@@ -248,7 +248,7 @@
   }
 
   .redHeart {
-    color: red !important;
+    color: rgb(249, 24, 128) !important;
   }
 }
 
@@ -371,7 +371,7 @@
   }
 
   .redHeart {
-    color: red !important;
+    color: rgb(249, 24, 128) !important;
   }
 }
 
@@ -494,7 +494,7 @@
   }
 
   .redHeart {
-    color: red !important;
+    color: rgb(249, 24, 128) !important;
   }
 }
 
@@ -617,6 +617,6 @@
   }
 
   .redHeart {
-    color: red !important;
+    color: rgb(249, 24, 128) !important;
   }
 }

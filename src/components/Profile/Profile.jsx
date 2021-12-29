@@ -11,6 +11,7 @@ import EditProfile from "./EditProfile";
 import Follow from "../Follow";
 export default function Profile() {
   const [user, setUser] = useState(null);
+
   const loggedUser = useSelector((state) => state.user);
   const { token } = useSelector((state) => state.user);
 
@@ -25,7 +26,16 @@ export default function Profile() {
             Authorization: `Bearer ${token}`,
           },
         });
-        setUser(() => response.data);
+
+        if (response.status === 200) {
+          // const user = response.data;
+          // dispatch({
+          //   type: "ADD_USER",
+          //   token,
+          //   user,
+          // });
+          setUser(() => response.data);
+        }
       } catch (error) {
         console.error(error);
       }
