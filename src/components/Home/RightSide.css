@@ -168,12 +168,11 @@
     margin-bottom: 0;
   }
 
-  #whoToFollow .toFollow a {
+  #whoToFollow .toFollow .following {
     /* margin-left: 20px; */
     font-size: 0.9rem;
     height: 40px;
     color: black;
-    font-weight: bold;
     border-radius: 20px;
     padding: 10px;
   }
@@ -317,12 +316,11 @@
     margin-bottom: 0;
   }
 
-  #whoToFollow .toFollow a {
+  #whoToFollow .toFollow .following {
     /* margin-left: 20px; */
     font-size: 0.9rem;
     height: 40px;
     color: black;
-    font-weight: bold;
     border-radius: 20px;
     padding: 10px;
   }

@@ -74,16 +74,17 @@ export default function Follow({ User }) {
   return (
     <div>
       {following ? (
-        <a
+        <p
+          style={{ color: "#fff" }}
           onClick={handleDestroyFriendship}
-          className=" btn btn-outline-danger whiteFont"
+          className=" btn btn-outline-danger whiteFont following"
         >
           Unfollow
-        </a>
+        </p>
       ) : (
-        <a onClick={handleNewFriend} className="btn btn-light">
+        <p onClick={handleNewFriend} className="btn btn-light following">
           Follow
-        </a>
+        </p>
       )}
     </div>
   );

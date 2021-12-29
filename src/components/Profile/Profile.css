@@ -1,16 +1,3 @@
-:root {
-  /* Buscador */
-  --border-radius-color: rgba(42, 42, 243, 0.671);
-
-  /* Tendencias */
-  --tendencias-bg-color: rgba(87, 87, 87, 0.5);
-  --tendencias-font-color-a: rgb(153, 177, 238);
-  /* Noticias */
-  --noticias-font-color-p: rgb(165, 164, 164);
-  --main-bg-color: black;
-  --font-Color: #fff;
-  --font-grey: grey;
-}
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
   /* Tweeeeeeeet-------------------------------------------------------------------------------- */
