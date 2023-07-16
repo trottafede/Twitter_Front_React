@@ -11,8 +11,8 @@ export default function Login() {
   let location = useLocation();
   let from = location.state?.from?.pathname || "/";
 
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [email, setEmail] = useState("prueba@gmail.com");
+  const [password, setPassword] = useState("prueba");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = () => {
